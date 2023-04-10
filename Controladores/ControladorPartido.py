@@ -4,7 +4,8 @@ from Repositorios.RepositorioPartido import RepositorioPartido
 
 class ControladorPartido():
     def __init__(self):
-        self.repositorioPartido = RepositorioPartido
+        self.repositorioPartido = RepositorioPartido()
+        print("Creando ControladorPartido")
 
     def index(self):
         return self.repositorioPartido.findAll()

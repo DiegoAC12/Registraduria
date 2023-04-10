@@ -6,11 +6,12 @@ from Modelos.Mesa import Mesa
 from Modelos.Candidato import Candidato
 
 
-class ControladorResultado:
+class ControladorResultado():
     def __init__(self):
         self.repositorioResultado = RepositorioResultado()
         self.repositorioMesa = RepositorioMesa()
         self.repositorioCandidato = RepositorioCandidato()
+        print("Creando ControladorResultado")
 
     def index(self):
         return self.repositorioResultado.findAll()
