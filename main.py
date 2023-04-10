@@ -163,6 +163,12 @@ def eliminarResultado(id):
     return jsonify(json)
 
 
+@app.route("/candidatos/<string:id>/partidos/<string:id_partido>", methods=['PUT'])
+def asignarPartidoACandidato(id, id_partido):
+    json = miControladorCandidato.asignarPartido(id, id_partido)
+    return jsonify(json)
+
+
 @app.route("/", methods=['GET'])
 def test():
    json = {}
