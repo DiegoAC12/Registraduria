@@ -148,10 +148,10 @@ def crearResultado():
     return jsonify(json)
 
 
-@app.route("/resultados/<string:id>", methods=['PUT'])
-def modificarResultado(id):
+@app.route("/resultados/<string:id>/mesas/<string:id_mesa>/candidatos/<string:id_candidato>", methods=['PUT'])
+def modificarResultado(id, id_mesa, id_candidato):
     data = request.get_json()
-    json = miControladorResultado.update(id, data)
+    json = miControladorResultado.update(id, data, id_mesa, id_candidato)
     return jsonify(json)
 
 
