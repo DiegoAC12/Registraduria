@@ -21,7 +21,7 @@ class ControladorCandidato():
     def create(self, elCandidato):
         print("Crear un Candidato")
         nuevoCandidato = Candidato(elCandidato)
-        return self.repositorioEstudiante.save(nuevoCandidato)
+        return self.repositorioCandidato.save(nuevoCandidato)
 
     def show(self, id):
         print("Mostrando un Candidato con id ", id)
