@@ -1,3 +1,5 @@
+from idlelib.pyshell import idle_showwarning
+
 from flask import Flask
 from flask import jsonify
 from flask import request
@@ -163,7 +165,7 @@ def eliminarResultado(id):
 
 @app.route("/candidatos/<string:id>/partidos/<string:id_partido>", methods=['PUT'])
 def asignarPartidoACandidato(id, id_partido):
-    json = miControladorCandidato.asignarPartido(id, id_partido)
+    json = miControladorCandidato.asignarPartidos(id, id_partido)
     return jsonify(json)
 
 

@@ -1,9 +1,11 @@
 from Repositorios.RepositorioResultado import RepositorioResultado
 from Repositorios.RepositorioMesa import RepositorioMesa
 from Repositorios.RepositorioCandidato import RepositorioCandidato
+from Repositorios.RepositorioPartido import RepositorioPartido
 from Modelos.Resultado import Resultado
 from Modelos.Mesa import Mesa
 from Modelos.Candidato import Candidato
+from Modelos.Partido import Partido
 
 
 class ControladorResultado():
@@ -11,6 +13,7 @@ class ControladorResultado():
         self.repositorioResultado = RepositorioResultado()
         self.repositorioMesa = RepositorioMesa()
         self.repositorioCandidato = RepositorioCandidato()
+        self.repositorioPartido = RepositorioPartido()
         print("Creando ControladorResultado")
 
     def index(self):
