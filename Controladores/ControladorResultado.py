@@ -34,7 +34,7 @@ class ControladorResultado():
     def update(self, id, infoResultado, id_mesa, id_candidato):
         elResultado = Resultado(self.repositorioResultado.findById(id))
         elResultado.numMesa = infoResultado["numero_mesa"]
-        elResultado.idPartido = infoResultado["id_partido"]
+        elResultado.idPartido = infoResultado["id_candidato"]
         laMesa = Mesa(self.repositorioMesa.findById(id_mesa))
         elCandidato = Candidato(self.repositorioCandidato.findById(id_candidato))
         elResultado.mesa = laMesa
